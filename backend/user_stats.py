@@ -145,6 +145,17 @@ class UserStatsDetailed(Resource):
     def __check_format(arg, time_checker, argname: str):
         if not all(map(lambda item: len(item) == 2, arg)):
             abort(400, message=f"Expected {argname} to be a list [timestamp, value].")
+        if not all(
+            map(
+                lambda item: isinstance(item[0], (int, float))
+                and isinstance(item[1], int),
+                arg,
+            )
+        ):
+            abort(
+                400,
+                message="Type mismatch. 1st element should be either int or float. 2nd element should be int.",
+            )
         if not all(map(time_checker, arg)):
             abort(400, message="timestamp should be less than the current timestamp.")
 
