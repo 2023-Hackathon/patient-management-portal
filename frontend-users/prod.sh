@@ -2,4 +2,4 @@
 
 pip install -r requirements.txt
 
-streamlit run your_script.py --server.port 80
+streamlit run index.py --server.port 80
