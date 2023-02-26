@@ -12,12 +12,12 @@
 
 **Params Descriptions**:
 
-| Name              | Optional | Type                           | Description                                                              |
-| ----------------- | -------- | ------------------------------ | ------------------------------------------------------------------------ |
-| id                | No       | Integer                        | The id of the user.                                                      |
-| steps             | Yes      | `List[List[day, value]]`       | A list of items in the format of `[day, value]`. Defaults to `[]`.       |
-| anxieties-second  | Yes      | `List[List[timestamp, value]]` | A list of items in the format of `[timestamp, value]`. Defaults to `[]`. |
-| heartrates-second | Yes      | `List[List[timestamp, value]]` | A list of items in the format of `[timestamp, value]`. Defaults to `[]`  |
+| Name       | Optional | Type                           | Description                                                              |
+| ---------- | -------- | ------------------------------ | ------------------------------------------------------------------------ |
+| id         | No       | Integer                        | The id of the user.                                                      |
+| steps      | Yes      | `List[List[day, value]]`       | A list of items in the format of `[day, value]`. Defaults to `[]`.       |
+| heartrates | Yes      | `List[List[timestamp, value]]` | A list of items in the format of `[timestamp, value]`. Defaults to `[]`. |
+| anxieties  | Yes      | `List[List[timestamp, value]]` | A list of items in the format of `[timestamp, value]`. Defaults to `[]`. |
 
 Note: `List[timestamp, val]` is a list with two elements. The timestamp is a POSIX timestamp.
 
