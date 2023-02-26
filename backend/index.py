@@ -1,3 +1,5 @@
+import argparse
+
 from flask import Flask, g
 from flask_restful import Api
 
@@ -27,11 +29,20 @@ def close_connection(_):
         db.close()
 
 
-def main():
+def main(args):
     init_db()
     add_resources()
+    app.run(host="0.0.0.0", port=8443, debug=not args.release)
 
 
 if __name__ == "__main__":
-    main()
-    app.run(host="0.0.0.0", port=8443, debug=True)
+    argparser = argparse.ArgumentParser(
+        prog="backend",
+        description="Backend of Music Therapist Project",
+    )
+    argparser.add_argument("-r", "--release", action="store_true")
+    args = argparser.parse_args()
+
+    print(args)
+
+    main(args)
