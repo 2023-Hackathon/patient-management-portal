@@ -102,9 +102,9 @@ Field-name is the name of any of the variables above.
 ```json
 {
     "id": 1,
-	"name": "Hello World",
-	"gender": "Male",
-	"age": 25,
+    "name": "Hello World",
+    "gender": "Male",
+    "age": 25,
     "anxiety": 2.04
 }
 ```
@@ -146,11 +146,11 @@ The element inside the heartrates and anxieties is another list `[timestamp, val
 ```json
 {
     "id": 1,
-	"name": "Lorem Ipsum",
-	"gender": "Female",
-	"age": 36,
-	"steps": [[9200, 2642], [9201, 9237]],
-	"heartrates": [[1677383002, 77], [1677383003, 78]],
+    "name": "Lorem Ipsum",
+    "gender": "Female",
+    "age": 36,
+    "steps": [[9200, 2642], [9201, 9237]],
+    "heartrates": [[1677383002, 77], [1677383003, 78]],
     "anxieties": []
 }
 ```
