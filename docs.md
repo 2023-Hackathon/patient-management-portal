@@ -27,7 +27,7 @@ If an error occurs, the following struct will be returned:
 
 ```json
 {
-	"message": "some messages"
+    "message": "some messages"
 }
 ```
 
@@ -35,8 +35,8 @@ or
 
 ```json
 {
-	"message": {
-	    "field-name": "error messages"
+    "message": {
+        "field-name": "error messages"
     }
 }
 ```
@@ -69,7 +69,7 @@ Field-name is the name of any of the variables above.
 
 ```json
 {
-	"data": [0, 1, 2, 3, 4]
+    "data": [0, 1, 2, 3, 4]
 }
 ```
 
