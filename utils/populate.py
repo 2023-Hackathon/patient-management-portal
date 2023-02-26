@@ -6,7 +6,7 @@ import time
 
 import requests
 
-from env import APIS_FOR_USER_DETAILED
+from env import APIS_FOR_USER_BRIEF, APIS_FOR_USER_DETAILED
 
 
 def clamp(val, minv, maxv):
@@ -26,6 +26,13 @@ def fill_steps(user_id):
         requests.patch(APIS_FOR_USER_DETAILED, json=payload, timeout=1000)
 
 
+def create_user(user_id):
+    payload = {
+        "id": user_id,
+    }
+    requests.get(APIS_FOR_USER_BRIEF, json=payload, timeout=1000)
+
+
 def fill_heartrates(user_id):
     # prepare time info
     now = datetime.datetime.now()
@@ -43,8 +50,9 @@ def fill_anxieties(user_id):
 
 
 def main():
-    user_ids = [1]
+    user_ids = range(1, 11)
     for user_id in user_ids:
+        create_user(user_id)
         fill_steps(user_id)
 
     # real time rendering
